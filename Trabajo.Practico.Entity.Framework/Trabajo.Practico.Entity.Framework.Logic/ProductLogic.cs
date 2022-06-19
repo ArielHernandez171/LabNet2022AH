@@ -13,11 +13,8 @@ namespace Trabajo.Practico.Entity.Framework.Logic
         {
             bool esta = false;
             List<Products> productsList = context.Products.ToList();
-            foreach(var product in productsList)
-            {
-                if (product.SupplierID == id)
-                    esta = true;
-            }
+            if (context.Products.Any(p => p.SupplierID == id))
+                esta = true;
             return esta;
         }
     }

@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Trabajo.Practico.Entity.Framework.Entities;
+using Trabajo.Practico.Entity.Framework.Exceptions;
 using Trabajo.Practico.Entity.Framework.Logic;
-using Trabajo.Practico.Entity.Framework.Logic.Excepciones;
 
 namespace Trabajo.Practico.Entity.Framwork.UI
 {

@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Trabajo.Practico.Entity.Framework.Logic.Excepciones
+namespace Trabajo.Practico.Entity.Framework.Exceptions
 {
-    public class ExcepcionNoExisteId:Exception
+    public class ExcepcionNoExisteId : Exception
     {
         public ExcepcionNoExisteId() : base("No se encontro ningun elemento con este ID")
         {
 
         }
-        public ExcepcionNoExisteId(string mensaje):base(mensaje)
+        public ExcepcionNoExisteId(string mensaje) : base(mensaje)
         {
 
         }

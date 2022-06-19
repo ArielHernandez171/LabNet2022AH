@@ -12,11 +12,9 @@ namespace Trabajo.Practico.Entity.Framework.Logic
         public bool EsForgeinKey(int id)
         {
             bool esta=false;
-            List<Orders> ordersLista= context.Orders.ToList();
-            foreach (var orders in ordersLista)
+            if (context.Orders.Any(o => o.ShipVia == id))
             {
-                if (orders.ShipVia == id)
-                    esta = true;
+                esta = true;
             }
             return esta;
         }

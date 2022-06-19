@@ -36,7 +36,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Trabajo.Practico.Entity.Framwork.UI.Program</StartupObject>
+    <StartupObject>
+    </StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -68,6 +69,10 @@
     <ProjectReference Include="..\Trabajo.Practico.Entity.Framework.Entities\Trabajo.Practico.Entity.Framework.Entities.csproj">
       <Project>{804A3B26-D13A-405F-B2A6-69DE3C143E52}</Project>
       <Name>Trabajo.Practico.Entity.Framework.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Trabajo.Practico.Entity.Framework.Exceptions\Trabajo.Practico.Entity.Framework.Exceptions.csproj">
+      <Project>{C181528B-DE15-4C7E-AE07-03BF9208EA53}</Project>
+      <Name>Trabajo.Practico.Entity.Framework.Exceptions</Name>
     </ProjectReference>
     <ProjectReference Include="..\Trabajo.Practico.Entity.Framework.Logic\Trabajo.Practico.Entity.Framework.Logic.csproj">
       <Project>{AE96D493-B5EF-4C28-A37D-C4E9C842502B}</Project>

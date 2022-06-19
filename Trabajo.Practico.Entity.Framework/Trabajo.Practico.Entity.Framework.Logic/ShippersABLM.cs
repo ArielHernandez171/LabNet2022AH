@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Trabajo.Practico.Entity.Framework.Entities;
-using Trabajo.Practico.Entity.Framework.Logic.Excepciones;
+using Trabajo.Practico.Entity.Framework.Exceptions;
 
 namespace Trabajo.Practico.Entity.Framework.Logic
 {
@@ -48,17 +45,11 @@ namespace Trabajo.Practico.Entity.Framework.Logic
         }
         public Shippers GetOne(int id)
         {
-            bool esta = false;
             Shippers shippers =new Shippers();
-            foreach(var shipper in this.GetAll())
+            if (context.Shippers.First(s => s.ShipperID.Equals(id)) != null)
             {
-                if (shipper.ShipperID == id)
-                {
-                    shippers = shipper;
-                    esta = true;
-                }
-            }
-            if (esta == false)
+                shippers = context.Shippers.First(s => s.ShipperID==id);
+            }else
                 throw new ExcepcionNoExisteId();
             return shippers;
         }

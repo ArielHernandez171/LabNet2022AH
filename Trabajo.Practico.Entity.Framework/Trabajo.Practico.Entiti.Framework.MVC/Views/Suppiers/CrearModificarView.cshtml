@@ -1,0 +1,39 @@
+﻿@model Trabajo.Practico.Entiti.Framework.MVC.Models.SuplierModel
+
+@{
+    ViewBag.Title = "CrearModificarView";
+}
+
+<h2>CrearModificarView</h2>
+@using (Html.BeginForm("Create","Suppier",FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>ShippersModel</h4>
+        <hr />
+
+        <div class="form-group">
+
+            <div class="col-md-10">
+                @Html.LabelFor(Model=>Model.Nombre)
+                @Html.TextAreaFor(m=>m.Nombre)
+            </div>
+            
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Guardar" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
