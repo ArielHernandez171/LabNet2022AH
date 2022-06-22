@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Trabajo.Practico.Entiti.Framework.MVC.Models.ApiModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Api</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Body)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m=>m.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m=>m.UserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m=>m.Title)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <input readonly value="@item.Body" />
+            </td>
+            <td>
+                <input readonly value="@item.Id" />
+            </td>
+            <td>
+                <input readonly value="@item.UserId" />
+            </td>
+            <td>
+                <input readonly value="@item.Title" />
+            </td>
+        </tr>
+    }
+    </table>
